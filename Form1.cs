@@ -31,7 +31,7 @@ namespace AddBytes
                 var file = File.OpenWrite(textBox1.Text);
                 var siz = file.Seek(0, SeekOrigin.End);
                 var size = Convert.ToInt64(textBox2.Text);
-                decimal bite = size * 1000000; 
+                decimal bite = size * 1024 * 1024; // в мегабайтах
                 while (siz < bite)
                 {
                     siz++;
